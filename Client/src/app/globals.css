@@ -1,0 +1,130 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@config "../../tailwind.config.js";
+
+/* Smooth scrolling for internal anchor navigation */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Ensure anchored sections account for sticky header height */
+#about,
+#amenities,
+#homes,
+#invest,
+#lead,
+#testimonials,
+#facts {
+  scroll-margin-top: 96px; /* adjust if header height changes */
+}
+
+.marquee {
+  padding: 12px 0;
+}
+
+.marquee__track {
+  display: inline-flex;
+  align-items: center;
+  gap: 32px;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 28s linear infinite;
+}
+
+.marquee__track--reverse {
+  animation-name: marquee-reverse;
+  animation-duration: 34s;
+}
+
+/* Hide scrollbar for bottom nav */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.marquee__content {
+  display: inline-flex;
+  align-items: center;
+  gap: 32px;
+  padding-left: 24px;
+  padding-right: 24px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  font-size: 12px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track,
+  .marquee__track--reverse {
+    animation: none;
+    transform: translateX(0);
+  }
+}
+
+@layer base {
+  :root {
+    --bg-light: #f8fafc;
+    --bg-dark: #0f172a;
+    --brand-blue: #1e3a5f;
+    --brand-soft-blue: #4a7ba7;
+    --brand-green: #2e8b57;
+    --brand-gold: #d4a857;
+    --neutral-bg: #f8f9fb;
+    --neutral-white: #ffffff;
+    --neutral-text: #1a1a1a;
+    --neutral-muted: #6b7280;
+    --neutral-border: #e5e7eb;
+  }
+
+  body {
+    font-family: var(--font-body), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--neutral-bg);
+    color: var(--neutral-text);
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+  }
+
+  .dark body {
+    background-color: #0f172a;
+    color: #f1f5f9;
+  }
+}
