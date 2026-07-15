@@ -6,9 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function ContactPage() {
-  const mapsQuery = "Crescent Heights, Hospice Property Pvt. Ltd., Kolkata, West Bengal, India";
-  const mapsHref =
-    "https://www.google.com/maps/search/?api=1&query=Crescent%20Heights%20Kolkata";
+  const mapsQuery = "Crescent Heights, Hospice Property Pvt. Ltd., JFFJ+P4W, Reckjoani, Kolkata, West Bengal 700135";
+  const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapsQuery)}`;
   const mapsEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent(mapsQuery)}&output=embed`;
   const whatsappHref =
     "https://wa.me/918017776957?text=Hi%2C%20I%20want%20project%20details%20for%20Crescent%20Heights.";
@@ -181,7 +180,9 @@ export default function ContactPage() {
                   <p className="mt-1 text-sm leading-relaxed text-neutral-lightText">
                     Hospice Property Pvt. Ltd.
                     <br />
-                    Kolkata, West Bengal, India
+                    JFFJ+P4W, Reckjoani,
+                    <br />
+                    Kolkata, West Bengal 700135
                   </p>
                 </div>
                 <div className="hidden rounded-xl border border-neutral-border bg-neutral-background px-3 py-2 text-xs font-semibold tracking-[0.14em] text-neutral-lightText sm:block">

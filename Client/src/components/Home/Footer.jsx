@@ -105,7 +105,11 @@ export default function Footer() {
                   <span className="material-symbols-outlined mt-0.5 text-[18px] leading-none text-primary">
                     location_on
                   </span>
-                  Kolkata
+                  <span className="leading-relaxed">
+                    JFFJ+P4W, Reckjoani,
+                    <br />
+                    Kolkata 700135
+                  </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="material-symbols-outlined mt-0.5 text-[18px] leading-none text-primary">
@@ -158,7 +162,11 @@ export default function Footer() {
                   <span className="material-symbols-outlined mt-0.5 text-[18px] leading-none text-primary">
                     location_on
                   </span>
-                  Kolkata
+                  <span className="leading-relaxed">
+                    JFFJ+P4W, Reckjoani,
+                    <br />
+                    Kolkata 700135
+                  </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="material-symbols-outlined mt-0.5 text-[18px] leading-none text-primary">

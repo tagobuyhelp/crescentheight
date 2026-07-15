@@ -246,7 +246,7 @@ export default function PropertyDetailsClient({ id }) {
     "https://wa.me/918017776957?text=Hi%2C%20I%20want%20to%20know%20more%20about%20this%20property%20at%20Crescent%20Heights.";
 
   const planPdfHref = "/assets/images/Cresent_Heights%20.pdf";
-  const mapsQuery = "Crescent Heights Kolkata";
+  const mapsQuery = "Crescent Heights, JFFJ+P4W, Reckjoani, Kolkata, West Bengal 700135";
   const mapsEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent(mapsQuery)}&output=embed`;
   const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapsQuery)}`;
 

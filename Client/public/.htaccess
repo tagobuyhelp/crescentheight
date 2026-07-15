@@ -1,0 +1,20 @@
+RewriteEngine On
+
+# Prevent directory listing
+Options -Indexes
+
+# If the request is for an actual file or directory that exists, serve it directly
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# If the request is for a page (like /properties), rewrite to /properties.html
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# Fallback check for subdirectory pages
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^ %{REQUEST_URI}.html [L]
+
+# Custom error page
+ErrorDocument 404 /404.html
